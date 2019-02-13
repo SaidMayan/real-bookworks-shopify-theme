@@ -1,0 +1,42 @@
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth" style="position: relative;">
+<div class="sc-mobile-play" style="display: flex; justify-content: center;">
+  <button id="sc-mobile-play-id" class="sc-mobile-play" onclick="playStream()">PLAY</button>
+</div>      
+<div class="player-bookworks">
+<div class="sc-artwork"></div>
+<div class="player">
+  <span class='info'></span>
+  <div class="waveform"></div>
+  <div class="position"></div>  
+</div>
+</div>
+
+<iframe class="sc-widget" src="//w.soundcloud.com/player/?url=//soundcloud.com/user-438860541/oskarmann71118">
+</iframe>
+    </div>
+  </div>
+</div>
+<!-- <script src='//w.soundcloud.com/player/api.js'></script>
+<div class="player">
+  <span class='info'></span>
+  <div class="position"></div> 
+</div>
+
+<iframe class="sc-widget" src="//w.soundcloud.com/player/?url=//soundcloud.com/user-438860541">
+</iframe> -->
+<script src='//w.soundcloud.com/player/api.js'></script>
+
+<script>
+	function playStream(){
+		let playerControlButton = SC.Widget($('iframe.sc-widget')[0]);
+      	let buttonChangeText = document.getElementById("sc-mobile-play-id");
+        playerControlButton.toggle("playerControlButton");
+      	if (buttonChangeText.innerHTML  === 'PLAY') {
+    		buttonChangeText.innerHTML = "PAUSE";
+  			} else {
+    		buttonChangeText.innerHTML = "PLAY";;
+  			}
+		}	
+</script>
